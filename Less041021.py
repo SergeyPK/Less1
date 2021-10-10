@@ -1,33 +1,26 @@
-test_num = 10
-test_str = 'Sergey'
-
-# user_number = int(input('Write num ='))
+# Спортсмен занимается ежедневными пробежками.
+# В первый день его результат составил a километров.
+# Каждый день спортсмен увеличивал результат на 10% относительно предыдущего.
+# Требуется определить номер дня, на который результат спортсмена составит не менее b километров.
+# Программа должна принимать значения параметров a и b и выводить одно натуральное число — номер дня.
 #
-# test_str = 'Hello'
-# count =0
-# while count < user_number:
-#     print(test_str, count)
-#     count += 1
-# a = 5
-# b = 6
-# if a>b:
-#     print(a-b)
-#     print('выполнилось')
-# else:
-#     (a)
-#     print('else')
-#
-
-# test_str_1 = "Hello"
-# test_str_2 = 'Скажи "Вот такие дела"'
-# print(test_str_2+test_str_1)
-# print(test_str_2*2)
-# test_bool = False
-# test_list = [test_int, test_float, test_str_1, test_str_2, test_bool]
-# test_tuple = (test_int, test_float, test_str_1, test_str_2, test_bool)
-# test_dict = {"key_1": 10, "key_2": 11}
-# print(test_list)
-# print(test_tuple)
-# print(type(test_tuple))
-
+# Например: a = 2, b = 3.
+# Результат:
+# 1-й день: 2
+# 2-й день: 2,2
+# 3-й день: 2,42
+# 4-й день: 2,66
+# 5-й день: 2,93
+# 6-й день: 3,22
+# Ответ: на шестой день спортсмен достиг результата — не менее 3 км
+a = float(input('Введите количество километров в 1-й день '))
+b = float(input('Требуемое количество километров в день '))
+num_d = 0
+print("Результат:")
+print(f"1-й день: {a:0.2f}")
+while a < b:
+ a = a * 1.1
+ num_d = num_d+1
+ print(f"{num_d+1}-й день: {a:0.2f}")
+print(f"Ответ: на {num_d+1} спортсмен достиг результата - не менее {b} ({a:0.2f}) км")
 
